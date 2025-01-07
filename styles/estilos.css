@@ -1,0 +1,39 @@
+body {
+    background: none;
+    background-image: url("../img/fondo-catalogo.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.table img {
+    max-width: 10dvw;
+    max-height: 10dvh;
+}
+
+a {
+    padding: 5px !important;
+
+    img {
+        width: 25px;
+        height: 25px;
+    }
+
+
+}
+
+.btn {
+    border: 1px solid lightgrey;
+    border-radius: 0.25rem;
+}
+
+.edit {
+    &:hover {
+        background-color: #0d6efd;
+    }
+}
+
+.delete {
+    &:hover {
+        background-color: #dc3545;
+    }
+}
