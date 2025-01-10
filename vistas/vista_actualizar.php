@@ -31,7 +31,7 @@
                 </div>
 
                 <div class="form-check form-switch mb-3">
-                    <input class="form-check-input" type="checkbox" id="descuento" value="<?php echo $datos['descuento'] ?>">
+                    <input class="form-check-input" type="checkbox" name="descuento" id="descuento" value="<?php echo $datos['descuento'] ?>">
                     <label class="form-check-label" for="descuento">Descuento del juguete</label>
                 </div>
 

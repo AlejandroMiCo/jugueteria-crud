@@ -17,3 +17,4 @@ if (
         $_POST['imagen']
     );
 }
+require "../controladores/controlador.php";

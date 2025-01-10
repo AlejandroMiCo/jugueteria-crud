@@ -13,7 +13,8 @@
 <body>
     <div class="container mt-5">
         <h1 class="text-center mb-4">Catálogo de Juguetes</h1>
-        <div class="d-flex justify-content-end p-2 ">
+        <div class="d-flex justify-content-end p-2 --bs-gap-2">
+            <a class="btn bg-warning text-white gap" href="../controladores/controlador_clientes.php">Catalogo cliente</a>
             <a class="btn bg-success text-white" href="../index.php">Añadir juguete</a>
         </div>
         <div>

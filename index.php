@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="form-check form-switch mb-3">
-                    <input class="form-check-input" type="checkbox" id="descuento">
+                    <input class="form-check-input" type="checkbox" name="descuento" id="descuento">
                     <label class="form-check-label" for="descuento">Descuento del juguete</label>
                 </div>
                 <div class="form mb-3">
@@ -81,7 +81,7 @@
         ) {
             require_once "modelo/modelo.php";
             $juguete = new Juguete();
-
+     
             $resultado = $juguete->setJuguete(
                 $_POST['nombre'],
                 $_POST['precio'],
@@ -89,6 +89,7 @@
                 isset($_POST['descuento']) ? "Si" : "No",
                 $_POST['imagen']
             );
+            
             if ($resultado) {
                 echo "<script>
                 var toastEl = document.getElementById('toastSuccess');
