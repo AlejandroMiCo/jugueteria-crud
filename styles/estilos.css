@@ -1,6 +1,6 @@
 body {
     background: none;
-    background-image: url("../img/fondo-catalogo.jpeg");
+    background-image: url("../componentes/img/fondo-catalogo.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -18,9 +18,14 @@ a {
         height: 25px;
     }
 }
+
 .btn {
     border: 1px solid lightgrey;
     border-radius: 0.25rem;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 5px;
 }
 
 .edit {

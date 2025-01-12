@@ -1,20 +1,20 @@
 <?php
-if (
-    isset($_POST['id']) && is_numeric($_POST['id']) &&
-    isset($_POST['nombre']) && (!empty($_POST['nombre'])) &&
-    isset($_POST['precio']) && (!empty($_POST['precio'])) &&
-    isset($_POST['proveedor']) && (!empty($_POST['proveedor']))
-) {
+require_once "../modelo/modelo.php";
 
-    require_once "../modelo/modelo.php";
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $id = $_POST['id'];
+    $nombre = $_POST['nombre'];
+    $precio = $_POST['precio'];
+    $proveedor = $_POST['proveedor'];
+    $descuento = isset($_POST['descuento']) ? "Si" : "No";
+    $imagen = $_FILES['imagen']['name'];
+
     $juguete = new Juguete();
-    $datos = $juguete->actualizar(
-        $_POST['id'],
-        $_POST['nombre'],
-        $_POST['precio'],
-        $_POST['proveedor'],
-        isset($_POST['descuento']) ? "Si" : "No",
-        $_POST['imagen']
-    );
+    $resultado = $juguete->actualizar($id, $nombre, $precio, $proveedor, $descuento, $imagen);
+
+    if ($resultado) {
+        header("Location: ../vistas/vista_actualizar.php?id=$id&update=success");
+    } else {
+        header("Location: ../vistas/vista_actualizar.php?id=$id&update=fail");
+    }
 }
-require "../controladores/controlador.php";
